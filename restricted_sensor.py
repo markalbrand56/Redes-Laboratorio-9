@@ -57,12 +57,10 @@ class Sensor:
             self.record_humidity()
             self.wind_direction()
             
-            # Codificar los datos
             encoded_data = self.encode()
 
-            # Enviar los 3 bytes
             self.producer.send(topic="21004", value=encoded_data)
-            print(f"Data sent: {self.data} -> Encoded: {encoded_data}\n")
+            print(f"Data sent (restricted): {self.data} -> Encoded: {encoded_data}\n")
             time.sleep(INTERVAL)      
 
     def __str__(self):
