@@ -1,5 +1,10 @@
 # Estación Meteorológica - lab 9
 
+## Integrantes
+
+Mark Albrand - 21004
+Jimena Hernández - 21199
+
 ## 🌐 Tecnologías Utilizadas
 
 - **Python**: para simular los sensores y desarrollar los consumidores Kafka.
