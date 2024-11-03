@@ -16,7 +16,7 @@ class Sensor:
         self.data = Data(temperature=0, humidity=0, wind_direction="N")
 
     def record_temperature(self):
-        self.data.temperature = random.uniform(0,100)
+        self.data.temperature = random.uniform(0,110)
         
     def record_humidity(self):
         self.data.humidity = random.uniform(0,100)
