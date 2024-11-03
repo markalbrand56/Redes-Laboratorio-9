@@ -43,5 +43,8 @@ class Sensor:
 sensor = Sensor()
 
 print("Starting sensor...")
-sensor.record_data()
-print(sensor)
+
+try:
+    sensor.record_data()
+except KeyboardInterrupt:
+    print("Sensor stopped.")    
