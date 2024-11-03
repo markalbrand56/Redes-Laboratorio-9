@@ -16,19 +16,16 @@ consumer = KafkaConsumer(
 )
 
 def plot_all_data():
-    plt.clf()  # Limpiar la figura antes de actualizar
+    plt.clf()  
 
-    # Gráfico de temperatura
     plt.subplot(3, 1, 1)
     plt.plot(data['temperature'], label='Temperatura (°C)', color='tab:red')
     plt.legend()
 
-    # Gráfico de humedad
     plt.subplot(3, 1, 2)
     plt.plot(data['humidity'], label='Humedad (%)', color='tab:blue')
     plt.legend()
 
-    # Gráfico polar para la dirección del viento
     plt.subplot(3, 1, 3, polar=True)
     directions = {'N': 0, 'NE': 45, 'E': 90, 'SE': 135, 'S': 180, 'SO': 225, 'O': 270, 'NO': 315}
     wind_angles = [directions[direction] for direction in data['wind_direction']]
@@ -42,7 +39,7 @@ def plot_all_data():
     plt.pause(0.1)
 
 
-plt.ion()  # Activar el modo interactivo de matplotlib
+plt.ion()  # modo interactivo
 
 try:
     for message in consumer:
