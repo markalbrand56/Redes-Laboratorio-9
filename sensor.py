@@ -4,7 +4,7 @@ import time
 from models import Data
 from kafka import KafkaProducer
 
-INTERVAL = 15
+INTERVAL = 5
 
 class Sensor:
     producer = KafkaProducer(
